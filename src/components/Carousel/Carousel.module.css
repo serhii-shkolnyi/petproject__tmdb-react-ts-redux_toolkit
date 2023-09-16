@@ -1,0 +1,21 @@
+.carousel_wrapper {
+    margin-top: 15px;
+}
+.carousel_body {
+    padding: 15px;
+    display: flex;
+}
+
+.slide {
+}
+
+.slide_movie img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.carousel_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

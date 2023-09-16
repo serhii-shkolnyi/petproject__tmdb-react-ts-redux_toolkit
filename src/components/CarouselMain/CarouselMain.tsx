@@ -17,7 +17,7 @@ const CarouselMain: FC = () => {
     useEffect(() => {
         dispatch(movieActions.moviesNowPlaying({page}));
     }, [dispatch]);
-    console.log(movie, page)
+
     return (
         <Swiper
             modules={[Navigation, Autoplay]}
