@@ -1,9 +1,11 @@
 import React, {FC} from 'react';
 
+import {CarouselMain} from "../../CarouselMain/CarouselMain";
+
 const Main: FC = () => {
     return (
         <div>
-            Main
+            <CarouselMain/>
         </div>
     );
 };
