@@ -1,0 +1,127 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_body {
+    height: 100%;
+    width: 100%;
+}
+
+.header_navigate {
+    width: 50%;
+    justify-content: start;
+    column-gap: 50px;
+}
+
+.navigate_logo {
+    min-width: 200px;
+}
+
+.navigate_logo img {
+    display: block;
+    height: 25px;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+.navigate_menu {
+    color: #fff;
+    text-shadow: 1px 1px  black;
+}
+
+.menu_list {
+    column-gap: 30px;
+}
+
+.menu_item {
+
+}
+
+.menu_item a[class*='active'] {
+    color: var(--lightBlue);
+}
+
+.menu_item a[class*='active']:before {
+    transform: scaleX(1);
+}
+
+.menu_link {
+    font-size: 16px;
+    position: relative;
+}
+
+.menu_link:hover {
+    color: var(--colorMenuLinkHover);
+    text-shadow: none;
+}
+
+.menu_link:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.35s;
+}
+
+.menu_link:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorMenuLinkHover);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s;
+}
+
+.header_settings {
+    width: 50%;
+    justify-content: end;
+    column-gap: 30px;
+    font-size: 14px;
+}
+
+.settings_themeSwitcher {
+    cursor: pointer;
+}
+
+.themeSwitcher_item {
+    column-gap: 5px;
+    color: #fff;
+    text-shadow: 1px 1px  black;
+}
+
+.themeSwitcher_item:hover {
+    color: var(--colorMenuLinkHover);
+    text-shadow: none;
+}
+
+.themeSwitcher_item img{
+    height: 25px;
+}
+
+.settings_account {
+    min-width: 165px;
+    color: #fff;
+    text-shadow: 1px 1px  black;
+    cursor: pointer;
+}
+
+.settings_account:hover {
+    color: var(--colorMenuLinkHover);
+    text-shadow: none;
+}
+
+.account_avatar {
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.separator {
+    width: 10px;
+    height: 15px;
+    margin: 0 -10px 0 -15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}

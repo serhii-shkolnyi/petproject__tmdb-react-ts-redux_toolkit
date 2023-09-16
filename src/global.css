@@ -1,10 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
 html,
 body {
+    font-family: 'Ubuntu', sans-serif;
     min-height: 100%;
+    overflow: hidden;
+    background-image: url("assets/images/background.webp");
+    background-size: cover;
+}
+
+:root {
+    --lightBlue: rgb(1, 180, 228);
+    --darkBlue: rgb(13, 37, 63);
+    --lightGreen: rgb(144, 206, 161);
+
+    --backgroundColorLight: rgba(242, 243, 244, 0.8);
+    --backgroundColorDark: rgba(3, 37, 63, 0.8);
+
+}
+
+.theme-light {
+    color: var(--darkBlue);
+    background-color: var(--backgroundColorLight);
+    --colorMenuLinkHover: var(--darkBlue);
+
+}
+
+.theme-dark {
+    color: var(--lightGreen);
+    background-color: var(--backgroundColorDark);
+    --colorMenuLinkHover: var(--lightBlue);
+
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
