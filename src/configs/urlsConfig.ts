@@ -1,6 +1,11 @@
 const account = '/account';
+
 const movie = "/movie";
 const nowPaying = "/now_playing";
+const popular = "/popular";
+const topRated = "/top_rated";
+const upComing = "/upcoming";
+
 
 const urlsConfig = {
     account: {
@@ -9,7 +14,10 @@ const urlsConfig = {
     },
     movie: {
         base: movie,
-        moviesNowPlaying: `${movie}${nowPaying}`,
+        nowPlaying: `${movie}${nowPaying}`,
+        popular: `${movie}${popular}`,
+        topRated: `${movie}${topRated}`,
+        upComing: `${movie}${upComing}`,
 
     }
 };

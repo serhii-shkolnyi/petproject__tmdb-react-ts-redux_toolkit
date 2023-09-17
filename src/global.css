@@ -34,6 +34,7 @@ body {
     --lightBlue: rgb(1, 180, 228);
     --darkBlue: rgb(13, 37, 63);
     --lightGreen: rgb(144, 206, 161);
+    --swiper-navigation-color: #ff6300;
 
     --backgroundColorLight: rgba(242, 243, 244, 0.8);
     --backgroundColorDark: rgba(3, 37, 63, 0.8);

@@ -12,8 +12,8 @@ interface IState {
 
 const initialState: IState = {
     movie: [],
-    page: 1,
-    total_pages: 500,
+    page: 0,
+    total_pages: 0,
 };
 
 const moviesNowPlaying = createAsyncThunk<IMovieResponse, { page: number }>(

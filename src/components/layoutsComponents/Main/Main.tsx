@@ -1,19 +1,12 @@
 import React, {FC} from 'react';
-
-import {CarouselMain} from "../../CarouselMain/CarouselMain";
-import {Carousel} from "../../Carousel/Carousel";
+import {Outlet} from "react-router-dom";
 
 const Main: FC = () => {
+
+
     return (
         <div>
-            <CarouselMain/>
-
-            <Carousel/>
-            <Carousel/>
-            <Carousel/>
-            <Carousel/>
-            <Carousel/>
-
+            <Outlet/>
         </div>
     );
 };
