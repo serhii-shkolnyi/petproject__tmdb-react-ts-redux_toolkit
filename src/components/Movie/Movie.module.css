@@ -1,5 +1,5 @@
 .container {
-    width: 23%;
+    width: 18%;
     border-radius: 7px;
     box-shadow: 0 0 2px black;
     margin: 10px;
@@ -14,6 +14,7 @@
 }
 
 .container img {
+    min-height: 324px;
     width: 100%;
     border-radius: 5px 5px 0 0;
 }

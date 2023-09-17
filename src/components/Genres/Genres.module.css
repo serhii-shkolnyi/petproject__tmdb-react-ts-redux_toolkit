@@ -1,0 +1,7 @@
+.genres {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}

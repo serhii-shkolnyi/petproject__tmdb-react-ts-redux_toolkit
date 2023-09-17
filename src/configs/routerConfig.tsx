@@ -1,7 +1,11 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 
-import {MainLayout} from "../layouts/MainLayout";
-import {MovieNowPlayingPage} from "../pages";
+import {MainLayout, MovieLayout} from "../layouts";
+import {MovieNowPlayingPage, MoviesAllPage, MoviesByGenrePage, MovieTopRatedPage, MovieUpcomingPage} from "../pages";
+import {MoviesBySearchPage} from "../pages/MoviesBySearchPage/MoviesBySearchPage";
+import {MovieDetailsPage} from "../pages/MovieDetailsPage/MovieDetailsPage";
+import {NotFoundPage} from "../pages/NotFoundPage/NotFoundPage";
+
 
 const routerConfig = createBrowserRouter([
     {
@@ -9,9 +13,52 @@ const routerConfig = createBrowserRouter([
         element: <MainLayout/>,
         children: [
             {
-                path: "top",
-                element: <MovieNowPlayingPage/>
+                index: true,
+                element: <Navigate to={'movie'}/>
+            },
+            {
+                path: "movie",
+                element: <MovieLayout/>,
+                children: [
+                    {
+                        index: true,
+                        element:<Navigate to={'all'}/>
+                    },
+                    {
+                        path: "all",
+                        element: <MoviesAllPage/>
+                    },
+                    {
+                        path: "now",
+                        element: <MovieNowPlayingPage/>
+                    },
+                    {
+                        path: "upcoming",
+                        element: <MovieUpcomingPage/>
+                    },
+                    {
+                        path: "top-rated",
+                        element: <MovieTopRatedPage/>
+                    },
+                    {
+                        path: "genre/:id",
+                        element: <MoviesByGenrePage/>
+                    },
+                    {
+                        path: "search",
+                        element: <MoviesBySearchPage/>
+                    }
+                ]
+            },
+            {
+                path: "movie/:id",
+                element: <MovieDetailsPage/>
+            },
+            {
+                path: "*",
+                element: <NotFoundPage/>
             }
+
         ]
     }
 ]);

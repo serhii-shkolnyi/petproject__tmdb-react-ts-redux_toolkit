@@ -1,13 +1,11 @@
-import React, {FC, useEffect} from 'react';
-import {useSearchParams} from "react-router-dom";
-
-import css from "./MovieNowPlayingPage.module.css";
-import {Movies} from "../../components";
+import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../hooks";
+import {useSearchParams} from "react-router-dom";
 import {movieActions} from "../../store";
+import css from "../MovieNowPlayingPage/MovieNowPlayingPage.module.css";
+import {Movies} from "../../components";
 
-
-const MovieNowPlayingPage: FC = () => {
+const MovieUpcomingPage = () => {
     const dispatch = useAppDispatch();
     const {movie, total_pages} = useAppSelector(state => state.movie);
 
@@ -22,7 +20,7 @@ const MovieNowPlayingPage: FC = () => {
     };
 
     useEffect(() => {
-        dispatch(movieActions.moviesNowPlaying({page}));
+        dispatch(movieActions.movieUpcoming({page}));
         setQuery(prev => ({...prev, page: prev.get('page')}))
     }, [dispatch, query]);
 
@@ -39,11 +37,10 @@ const MovieNowPlayingPage: FC = () => {
                 </div>
                 <button className={css.button} disabled={page === total_pages - 20} onClick={toNextPage}>next</button>
             </div>
-
         </div>
     );
 };
 
 export {
-    MovieNowPlayingPage
+    MovieUpcomingPage
 };

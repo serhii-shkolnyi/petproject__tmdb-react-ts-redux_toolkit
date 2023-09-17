@@ -7,7 +7,7 @@ import logo from "../../../assets/icons/logo.svg";
 import moon from "../../../assets/icons/moon.svg";
 import sun from "../../../assets/icons/sun.svg";
 import {useAppDispatch, useAppSelector} from "../../../hooks";
-import {accountActions, themeActions} from "../../../store/slices";
+import {accountActions, themeActions} from "../../../store";
 import {imageURL} from "../../../configs";
 
 const Header: FC = () => {
@@ -31,16 +31,16 @@ const Header: FC = () => {
                 <nav className={css.navigate_menu}>
                     <ul className={`${css.flex} ${css.menu_list}`}>
                         <li className={css.menu_item}>
-                            <NavLink className={css.menu_link} to={"/movies"}>Movies</NavLink>
+                            <NavLink className={css.menu_link} to={"/movie"}>Movies</NavLink>
                         </li>
-                        <li className={css.separator}></li>
-                        <li className={css.menu_item}>
-                            <NavLink className={css.menu_link} to={"/tv-shows"}>TV Shows</NavLink>
-                        </li>
-                        <li className={css.separator}></li>
-                        <li className={css.menu_item}>
-                            <NavLink className={css.menu_link} to={"/people"}>People</NavLink>
-                        </li>
+                        {/*<li className={css.separator}></li>*/}
+                        {/*<li className={css.menu_item}>*/}
+                        {/*    <NavLink className={css.menu_link} to={"/tv-shows"}>TV Shows</NavLink>*/}
+                        {/*</li>*/}
+                        {/*<li className={css.separator}></li>*/}
+                        {/*<li className={css.menu_item}>*/}
+                        {/*    <NavLink className={css.menu_link} to={"/people"}>People</NavLink>*/}
+                        {/*</li>*/}
                     </ul>
                 </nav>
             </div>

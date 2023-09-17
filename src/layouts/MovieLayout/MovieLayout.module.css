@@ -1,0 +1,85 @@
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: var(--lightBlue);
+}
+
+.menu a[class='active'] {
+    color: white;
+    background-color: var(--lightBlue);
+    border-radius: 0 7px 0 7px;
+    padding: 5px 10px;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px 3px black;
+}
+
+.leftMenuUnderline {
+    width: 10px;
+    height: 15px;
+    margin: 0 -10px 0 -15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.flex {
+    width: 90%;
+    margin: 0 0 20px 0;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--lightBlue);
+}
+
+.inputSearch {
+    width: 310px;
+    border-radius: 5px;
+    border: 1px solid var(--lightBlue);
+    padding: 7px 35px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.inputSearch:focus {
+    border: 1px solid var(--lightBlue);
+    outline: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+.form {
+    position: relative;
+}
+
+
+.Dropdown-root {
+    width: 200px;
+}
+
+.Dropdown-placeholder {
+    margin: -2px;
+}
+
+.Dropdown-control {
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    border: 1px solid var(--lightBlue) !important;
+}

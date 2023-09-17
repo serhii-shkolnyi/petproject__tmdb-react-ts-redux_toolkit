@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, PropsWithChildren} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Autoplay} from 'swiper';
 import StarRatings from 'react-star-ratings';
@@ -6,17 +6,15 @@ import StarRatings from 'react-star-ratings';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import css from "./CarouselMain.module.css";
-import {useAppDispatch, useAppSelector} from "../../hooks";
-import {movieActions} from "../../store";
-import {imageURL} from "../../configs";
+import {imageOriginalURL, imageURL} from "../../configs";
+import {IMovie} from "../../interfaces";
 
-const CarouselMain: FC = () => {
-    const dispatch = useAppDispatch();
-    const {movie, page} = useAppSelector(state => state.movie);
+interface IProps extends PropsWithChildren {
+    movie: IMovie[];
+}
 
-    useEffect(() => {
-        dispatch(movieActions.moviesNowPlaying({page}));
-    }, [dispatch]);
+const CarouselMain: FC<IProps> = ({movie}) => {
+
 
     return (
         <Swiper
@@ -32,7 +30,7 @@ const CarouselMain: FC = () => {
                 <div>
                     {movie.map(movie =>
                         <SwiperSlide className={css.slide_flex} style={{
-                            backgroundImage: `url(${imageURL}${movie.backdrop_path})`,
+                            backgroundImage: `url(${imageOriginalURL}${movie.backdrop_path})`,
                             backgroundSize: "cover"
                         }}>
                             <div className={css.slide_body}>

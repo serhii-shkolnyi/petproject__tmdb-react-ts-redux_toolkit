@@ -60,3 +60,30 @@ body {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+.Dropdown-root {
+    width: 200px !important;
+}
+
+.Dropdown-placeholder {
+    margin: -2px !important;
+}
+
+.Dropdown-control {
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    border: 1px solid var(--lightBlue) !important;
+}
+
+.Dropdown-menu {
+    border-radius: 5px !important;
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+}
